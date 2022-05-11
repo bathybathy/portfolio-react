@@ -10,3 +10,8 @@ export const ImgHome = styled.img`
   border: 1px solid white;
   border-radius: 100%;
 `;
+export const DivIcons = styled.div`
+    display: flex;
+    gap: 15px;
+    text-align: center;
+`

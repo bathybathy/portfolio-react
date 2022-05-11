@@ -1,14 +1,17 @@
-import { ListNav, StyledNav } from './Header.styles'
-import LinkNav from './LinkNav'
+import { ListNav, StyledHeader, StyledNav } from "./Header.styles";
+import LinkNav from "./LinkNav";
 
 const Header = () => {
   return (
-    <StyledNav>
+    <StyledHeader>
+      <StyledNav>
         <ListNav>
-            <LinkNav pathLink='/' text='Home' />
+          <LinkNav pathLink="/" text="Home" />
+          <LinkNav pathLink="/repos" text="Projetos" />
         </ListNav>
-    </StyledNav>
-  )
-}
+      </StyledNav>
+    </StyledHeader>
+  );
+};
 
-export default Header
+export default Header;

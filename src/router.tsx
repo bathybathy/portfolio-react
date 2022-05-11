@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import GitProvider from "./context/GitContext";
 import Home from "./pages/home/Home";
+import Repos from "./pages/repos/Repos";
 
 const Router = () => {
   return (
@@ -10,6 +11,7 @@ const Router = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/repos" element={<Repos />} />
         </Routes>
       </GitProvider>
     </BrowserRouter>
