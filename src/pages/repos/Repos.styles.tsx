@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../../Theme";
 
 export const ReposCard = styled.div`
   width: 800px;
@@ -15,21 +16,18 @@ export const ReposGrid = styled.div`
 export const ReposDivItem = styled.div`
   width: 250px;
   height: 200px;
-  border: 1px solid #dcdede;
+  border: ${Theme.cardBorder};
   border-radius: 16px;
   padding: 10px;
-  background-color: #f6f8f9;
+  background-color: ${Theme.color.cardBackground};
+  box-shadow: ${Theme.boxShadow};;
 `;
 export const StyledA = styled.a`
   text-decoration: none;
-  color: #f25757;
+  color: ${Theme.color.highlight};
 `;
-export const StyledSpan = styled.span`
-  color: #4a4e69;
-`;
+
 export const StyledH3 = styled.h3`
   padding: 0;
 `;
-export const StyledP = styled.p`
-  color: #4a4e69;
-`;
+

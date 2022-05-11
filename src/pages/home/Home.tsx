@@ -1,7 +1,7 @@
-import { CardHome, DivIcons, ImgHome } from "./Home.styles";
+import { CardHome, DivIcons, ImgHome, StyledH1, StyledSpanHighlight } from "./Home.styles";
 import { useContext, useEffect } from "react";
 import { GitContext, IGitContext } from "../../context/GitContext";
-import { FullPage, GeneralDiv } from "../../GeneralStyles";
+import { FullPage, GeneralDiv, StyledP, StyledSpan } from "../../GeneralStyles";
 import { MdLocationCity, MdOutlineWork } from "react-icons/md";
 
 const Home = () => {
@@ -11,27 +11,27 @@ const Home = () => {
     getInfo();
   }, []);
   return (
-      <FullPage>
-    <CardHome>
-      <GeneralDiv>
-        <ImgHome src={dataGit.avatar_url} />
-      </GeneralDiv>
-      <GeneralDiv>
-        <h1>Olá, meu nome é {dataGit.name}.</h1>
-        <p>{dataGit.bio}.</p>
-        <DivIcons>
-        <span>
-          <MdLocationCity />
-          {dataGit.location}
-        </span>
-        <span>
-          <MdOutlineWork />
-          {dataGit.company}
-        </span>
-        </DivIcons>
-      </GeneralDiv>
-      <GeneralDiv></GeneralDiv>
-    </CardHome>
+    <FullPage>
+      <CardHome>
+        <GeneralDiv>
+          <ImgHome src={dataGit.avatar_url} />
+        </GeneralDiv>
+        <GeneralDiv>
+          <StyledH1>Olá, meu nome é <StyledSpanHighlight >{dataGit.name}</StyledSpanHighlight>.</StyledH1>
+          <StyledP>{dataGit.bio}</StyledP>
+          <DivIcons>
+            <StyledSpan>
+              <MdLocationCity />
+              {dataGit.location}
+            </StyledSpan>
+            <StyledSpan>
+              <MdOutlineWork />
+              {dataGit.company}
+            </StyledSpan>
+          </DivIcons>
+        </GeneralDiv>
+        <GeneralDiv></GeneralDiv>
+      </CardHome>
     </FullPage>
   );
 };

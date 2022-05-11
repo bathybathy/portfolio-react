@@ -1,19 +1,14 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
-width: 100%;
-margin: 0 !important;
 `;
 export const ListNav = styled.ul`
   list-style: none;
   margin: 0;
-  width: 100%;
-  margin: 0 !important;
 `;
 export const ItemNav = styled.li``;
 export const StyledHeader = styled.div`
   height: 80px;
   width: 100%;
   background-color: #bcd4e6;
-  margin: 0 !important;
 `;
