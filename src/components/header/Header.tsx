@@ -1,8 +1,13 @@
-import React from 'react'
+import { ListNav, StyledNav } from './Header.styles'
+import LinkNav from './LinkNav'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <StyledNav>
+        <ListNav>
+            <LinkNav pathLink='/' text='Home' />
+        </ListNav>
+    </StyledNav>
   )
 }
 

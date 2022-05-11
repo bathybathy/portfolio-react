@@ -1,9 +1,27 @@
-import React from 'react'
+import { CardHome, ImgHome } from "./Home.styles";
+import { useContext, useEffect } from "react";
+import { GitContext, IGitContext } from "../../context/GitContext";
+import { GeneralDiv } from "../../GeneralStyles";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const { getInfo, dataGit } = useContext(GitContext) as IGitContext;
 
-export default Home
+  useEffect(() => {
+    getInfo();
+  }, []);
+  return (
+    <CardHome>
+      <GeneralDiv>
+        <ImgHome src={dataGit.avatar_url} />
+      </GeneralDiv>
+      <GeneralDiv>
+        <h1>Olá, meu nome é {dataGit.name}.</h1>
+        <p>
+          {dataGit.bio}.
+        </p>
+      </GeneralDiv>
+    </CardHome>
+  );
+};
+
+export default Home;
