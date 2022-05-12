@@ -4,6 +4,7 @@ import { Theme } from "../../Theme";
 export const ReposCard = styled.div`
   width: 800px;
   margin: 30px;
+  min-height: 280px;
 `;
 export const ReposGrid = styled.div`
   display: grid;
