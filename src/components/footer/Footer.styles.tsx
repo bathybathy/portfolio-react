@@ -2,21 +2,15 @@ import styled from "styled-components";
 import { Theme } from "../../Theme";
 import {AiFillLinkedin, AiFillGithub, AiOutlineInstagram} from "react-icons/ai"
 
-export const ContatoCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 800px;
-  border: ${Theme.cardBorder};
-  box-shadow: ${Theme.boxShadow};
-  background-color: ${Theme.color.cardBackground};
-  border-radius: 8px;
-  margin: 20px;
-  height: 280px;
-  padding: 10px;
-`;
-
+export const StyledFooter = styled.footer`
+    width: 100%;
+    height: 50px;
+    background-color: ${Theme.color.primaryText};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+`
 export const StyledLinkedin = styled(AiFillLinkedin)`
     font-size: 20px;
 `

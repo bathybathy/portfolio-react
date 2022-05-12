@@ -8,7 +8,7 @@ export const FullPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 130px);
 `
 export const StyledSpan = styled.span`
   color: ${Theme.color.primaryText};
