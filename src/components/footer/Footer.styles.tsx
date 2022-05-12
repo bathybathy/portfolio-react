@@ -12,12 +12,12 @@ export const StyledFooter = styled.footer`
     gap: 30px;
 `
 export const StyledLinkedin = styled(AiFillLinkedin)`
-    font-size: 20px;
+    font-size: 25px;
 `
 
 export const StyledGit = styled(AiFillGithub)`
-    
+    font-size: 25px;
 `
 export const StyledInstagram = styled(AiOutlineInstagram)`
-    
+    font-size: 25px;
 `

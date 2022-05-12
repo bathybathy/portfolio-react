@@ -1,10 +1,10 @@
-import { ItemNav } from "./Header.styles"
-import { Link } from "react-router-dom"
+import { ItemNav, StyledLinkNav } from "./Header.styles"
+
 
 const LinkNav = ({pathLink, text} : { pathLink: string, text: string }) => {
   return (
       <>
-    <ItemNav><Link to={pathLink}>{text}</Link></ItemNav>
+    <ItemNav><StyledLinkNav to={pathLink}>{text}</StyledLinkNav></ItemNav>
     </>
   )
 }
