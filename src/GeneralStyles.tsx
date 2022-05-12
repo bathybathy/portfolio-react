@@ -16,3 +16,12 @@ export const StyledSpan = styled.span`
 export const StyledP = styled.p`
   color: ${Theme.color.primaryText};
 `;
+
+export const StyledH3 = styled.h3`
+  padding: 0;
+`;
+
+export const StyledA = styled.a`
+  text-decoration: none;
+  color: ${Theme.color.highlight};
+`;

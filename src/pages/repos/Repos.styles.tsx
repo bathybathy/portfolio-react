@@ -22,12 +22,6 @@ export const ReposDivItem = styled.div`
   background-color: ${Theme.color.cardBackground};
   box-shadow: ${Theme.boxShadow};;
 `;
-export const StyledA = styled.a`
-  text-decoration: none;
-  color: ${Theme.color.highlight};
-`;
 
-export const StyledH3 = styled.h3`
-  padding: 0;
-`;
+
 
