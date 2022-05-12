@@ -1,3 +1,4 @@
+import { Block } from "notiflix";
 import { useEffect, useContext } from "react";
 import { GitContext, IGitContext } from "../../context/GitContext";
 import { FullPage, StyledSpan, StyledP, StyledH3, StyledA } from "../../GeneralStyles";
@@ -7,11 +8,12 @@ import { ReposCard, ReposDivItem, ReposGrid } from "./Repos.styles";
 const Repos = () => {
   const { getRepos, reposGit } = useContext(GitContext) as IGitContext;
   useEffect(() => {
+    Block.circle('.reposCard')
     getRepos();
   }, []);
   return (
     <FullPage>
-      <ReposCard>
+      <ReposCard className="reposCard">
         <ReposGrid>
           {reposGit.map((repo) => (
             <ReposDivItem key={repo.id}>

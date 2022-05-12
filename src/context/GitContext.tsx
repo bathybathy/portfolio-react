@@ -1,3 +1,4 @@
+import { Block } from "notiflix";
 import { createContext, useState } from "react";
 import api from '../api';
 
@@ -30,8 +31,8 @@ const GitProvider = ({ children }: any) => {
     const getInfo = async () =>{
         try {
             const { data } = await api.get('')
-            console.log(data)
             setDataGit(data)
+            Block.remove('.homeCard')
         } catch (error) {
             
         }
@@ -39,8 +40,8 @@ const GitProvider = ({ children }: any) => {
     const getRepos = async () =>{
         try {
             const { data } = await api.get('/repos')
-            console.log(data)
             setReposGit(data)
+            Block.remove('.reposCard')
         } catch (error) {
             
         }

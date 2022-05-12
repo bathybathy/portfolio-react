@@ -3,16 +3,18 @@ import { useContext, useEffect } from "react";
 import { GitContext, IGitContext } from "../../context/GitContext";
 import { FullPage, GeneralDiv, StyledP, StyledSpan } from "../../GeneralStyles";
 import { MdLocationCity, MdOutlineWork } from "react-icons/md";
+import { Block } from 'notiflix'
 
 const Home = () => {
   const { getInfo, dataGit } = useContext(GitContext) as IGitContext;
 
   useEffect(() => {
+    Block.circle('.homeCard')
     getInfo();
   }, []);
   return (
     <FullPage>
-      <CardHome>
+      <CardHome className="homeCard">
         <GeneralDiv>
           <ImgHome src={dataGit.avatar_url} />
         </GeneralDiv>
