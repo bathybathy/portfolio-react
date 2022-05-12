@@ -1,12 +1,13 @@
 import { CardHome, DivIcons, ImgHome, StyledH1, StyledSpanHighlight } from "./Home.styles";
 import { useContext, useEffect } from "react";
-import { GitContext, IGitContext } from "../../context/GitContext";
+import { GitContext } from "../../context/GitContext";
 import { FullPage, GeneralDiv, StyledP, StyledSpan } from "../../GeneralStyles";
 import { MdLocationCity, MdOutlineWork } from "react-icons/md";
 import { Block } from 'notiflix'
+import { IGitContext } from "../../context/GitContext.models";
 
 const Home = () => {
-  const { getInfo, dataGit } = useContext(GitContext) as IGitContext;
+  const { getInfo, dataGit } = useContext(GitContext) as IGitContext ;
 
   useEffect(() => {
     Block.circle('.homeCard')

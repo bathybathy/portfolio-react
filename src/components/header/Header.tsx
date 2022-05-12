@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
-import { GitContext, IGitContext } from "../../context/GitContext";
+import { GitContext } from "../../context/GitContext";
+import { IGitContext } from "../../context/GitContext.models";
 import { GeneralDiv } from "../../GeneralStyles";
 import { ImgNav, ListNav, StyledHeader, StyledNav } from "./Header.styles";
 import LinkNav from "./LinkNav";

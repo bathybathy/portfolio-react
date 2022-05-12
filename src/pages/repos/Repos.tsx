@@ -1,6 +1,7 @@
 import { Block } from "notiflix";
 import { useEffect, useContext } from "react";
-import { GitContext, IGitContext } from "../../context/GitContext";
+import { GitContext } from "../../context/GitContext";
+import { IGitContext } from "../../context/GitContext.models";
 import { FullPage, StyledSpan, StyledP, StyledH3, StyledA } from "../../GeneralStyles";
 import { languageToIcon } from "../../utils";
 import { ReposCard, ReposDivItem, ReposGrid } from "./Repos.styles";

@@ -1,27 +1,7 @@
-import { Block } from "notiflix";
+import { Block, Notify } from "notiflix";
 import { createContext, useState } from "react";
 import api from '../api';
-
-export interface IGitContext {
-    getInfo: () => void,
-    dataGit: {
-        name?: string,
-        avatar_url?: string,
-        bio?: string,
-        location?: string,
-        company?: string,
-    },
-    getRepos: () => void,
-    reposGit: Array <IRepos>,
-}
-
-export interface IRepos{
-    name: string,
-    id: number,
-    description: string,
-    language: string,
-    html_url: string
-}
+import { IGitContext } from "./GitContext.models";
 
 export const GitContext = createContext<IGitContext | null>(null);
 
@@ -34,7 +14,7 @@ const GitProvider = ({ children }: any) => {
             setDataGit(data)
             Block.remove('.homeCard')
         } catch (error) {
-            
+            Notify.failure("Ocorreu algum erro ao buscar as informações.")
         }
     };
     const getRepos = async () =>{
@@ -43,7 +23,7 @@ const GitProvider = ({ children }: any) => {
             setReposGit(data)
             Block.remove('.reposCard')
         } catch (error) {
-            
+            Notify.failure("Ocorreu algum erro ao buscar as informações.")
         }
     }
   return <GitContext.Provider value={{getInfo, dataGit, getRepos, reposGit}}>{children}</GitContext.Provider>;
